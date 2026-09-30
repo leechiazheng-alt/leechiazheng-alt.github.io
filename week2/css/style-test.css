@@ -1,0 +1,25 @@
+h1{
+   color:rgb(189, 33, 203);
+   background-color:rgb(52, 194, 202);
+    }
+p{
+    background-color:rgb(205, 108, 18);
+}
+button{
+    background-color:rgb(255, 0, 0);
+    border:none;
+    color:rgb(250, 253, 250);
+    padding:10px 20px;
+    text-transform:uppercase;
+    border-radius:3px;
+    cursor:pointer;
+    margin: 5px;
+    font-size: 16px;
+    font-family: Lucida Console, Courier New, monospace;
+}
+button.bg-blue{
+    background-color:rgb(0, 0, 255);
+}
+button.bg-green{
+    background-color:rgb(1, 249, 88);
+}

@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(25, 25, 35);
+}
+
+h1{
+    color: rgb(170, 140, 255);
+}
+
+p{
+    color: rgb(235, 235, 235);
+}
+
+h2{
+    border: 1px dashed rgb(100, 100, 120);
+    color: rgb(170, 140, 255);
+}
