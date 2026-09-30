@@ -1,0 +1,35 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@200..700&family=Playwrite+CA+Guides&family=ZCOOL+QingKe+HuangYou&display=swap');
+
+h1 {
+    font-family: 'Isometra', sans-serif;
+    font-weight: normal;
+    text-align: center;
+    border-bottom: 1px solid black;
+     border-top: 1px dotted black;
+     border-radius: 10px;
+     text-shadow: 2px 2px 4px #000000;
+}
+
+p {
+    font-family: 'Libre Caslon Condensed', serif;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: justify;
+    line-height: 2.5;
+    background-color: lightblue;
+    background-image: url('/week3/images/bg.jpg');
+}
+
+br {
+    font-family: 'Oswald', sans-serif;
+    font-style: italic;
+}
+h2 {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 50px;
+}
+.text-bold {
+    font-weight: bold;
+    background-color: yellow;
+}
