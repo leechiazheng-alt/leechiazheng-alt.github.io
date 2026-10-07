@@ -1,0 +1,44 @@
+.big-box {
+    display: flex;
+    gap: 20px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+
+
+div.bg-yellow {
+    background-color: #FFF4A3;
+}
+
+div.bg-pink {
+    background-color: #FFC0C7;
+    flex: 2;
+}
+
+div.bg-blue {
+    background-color: #D9EEE1;
+}
+
+.box {
+    padding: 10px;
+    flex: 1;
+}
+
+@media (max-width: 800px) {
+    .big-box {
+        flex-direction: column;
+    }
+    div.bg-blue {
+        background-color: blue;
+    }
+}
+
+@media (max-width: 500px) {
+    .bg-pink {
+        background: rgb(190,135,40);
+    }
+    div.bg-red{
+        display: none;
+    }
+}

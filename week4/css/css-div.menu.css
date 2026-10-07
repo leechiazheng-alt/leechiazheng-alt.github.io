@@ -1,0 +1,59 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    padding: 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button.bg-contact {
+    background-color: rgb(249, 97, 43);
+    color: rgb(253, 244, 244);
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    margin: 7px;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    margin-right: 80px;
+}
+.menuitem {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+.services {
+    color: #ff6535;
+    font-weight: bold;
+}
+.menu img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.menu img:last-child {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.menu img:last-child {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
