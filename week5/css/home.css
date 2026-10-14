@@ -1,0 +1,184 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.request {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.hamburger {
+    display: none;
+    width: 20px;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+}
+
+.content-left,
+.content-right {
+    flex: 1;
+}
+
+.button {
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 40px;
+    margin: 10px;
+}
+
+.logos {
+    display: flex;
+    gap: 40px;
+}
+
+.logos img {
+    filter: grayscale(100%);
+    width: 100%;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.team h2 {
+    background-color: #b9ff66;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 28px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.team p {
+    font-size: 12px;
+    max-width: 260px;
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px 20px;
+    margin-top: 35px;
+}
+
+.team-card {
+    border: 1px solid #191a23;
+    border-radius: 20px;
+    padding: 18px;
+    box-shadow: 0 4px 0 #191a23;
+}
+
+.member-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.member-info img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.member-info h3 {
+    font-size: 13px;
+    margin: 0 0 4px;
+}
+
+.member-info p {
+    font-size: 10px;
+    margin: 0;
+}
+
+.in {
+    margin-left: auto;
+    align-self: flex-start;
+    background-color: black;
+    color: #B9FF66;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.team-card hr {
+    border: none;
+    border-top: 1px solid #777;
+    margin: 15px 0;
+}
+
+.team-card > p {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .team-members {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .content {
+        flex-direction: column-reverse;
+    }
+
+    .logos {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .logos div {
+        width: 50%;
+        text-align: center;
+    }
+
+    .logos img {
+        width: 70%;
+    }
+
+    .team {
+        gap: 12px;
+    }
+
+    .team h2 {
+        font-size: 23px;
+    }
+
+    .team p {
+        font-size: 11px;
+    }
+}
