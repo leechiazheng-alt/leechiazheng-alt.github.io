@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -56,6 +57,7 @@ body {
 .bag img {
     width: 19px;
     height: 19px;
+    object-fit: contain;
 }
 
 .hamburger {
@@ -71,7 +73,9 @@ body {
 .banner {
     width: 100%;
     height: 250px;
-    background: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)), url("../images/back%20group.png") center/cover;
+    background:
+        linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)),
+        url("../images/back%20group.png") center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,6 +95,7 @@ body {
 
 .banner-text h1 {
     color: white;
+    font-family: "Oswald", sans-serif;
     font-size: 48px;
     letter-spacing: -1px;
 }
@@ -98,13 +103,13 @@ body {
 .recommendation {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    padding: 38px 5%;
+    gap: 15px;
+    padding: 38px 3.8%;
 }
 
 .food {
     position: relative;
-    height: 390px;
+    height: 290px;
     overflow: hidden;
 }
 
@@ -117,34 +122,432 @@ body {
 .food h3 {
     position: absolute;
     bottom: 10px;
-    right: 10px;
     left: 10px;
+    right: 10px;
     color: white;
-    font-size: 12px;
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: .3px;
+    white-space: nowrap;
     text-align: right;
 }
 
+.main-course {
+    width: 100%;
+    max-width: 1237px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+}
+
+.main-course-image {
+    width: 100%;
+    height: 780px;
+    overflow: hidden;
+}
+
+.main-course-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.main-course-content {
+    padding: 48px 52px;
+    background: white;
+}
+
+.main-course-content h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 54px;
+    font-weight: 600;
+    margin-bottom: 28px;
+}
+
+.course-item {
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.course-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.course-title h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.course-title span {
+    font-size: 12px;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+.course-item p {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: 3px;
+}
+
+.dessert-banner {
+    width: 100%;
+    height: 200px;
+    background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("../images/main.png") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dessert-banner h1 {
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.dessert-list {
+    max-width: 1180px;
+    margin: 45px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.dessert-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dessert-item img {
+    width: 100%;
+    height: 380px;
+    display: block;
+    object-fit: cover;
+}
+
+.dessert-info {
+    width: 100%;
+    min-height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.dessert-info h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.dessert-info span {
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.cocktail {
+    background:
+        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+        url("../images/best%20croctails%201.png") center/cover no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 40px 8%;
+}
+
+.cocktail-content {
+    color: white;
+    width: 450px;
+}
+
+.cocktail-content h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 55px;
+    margin: 0;
+}
+
+.town {
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.line {
+    width: 55px;
+    height: 1px;
+    background: white;
+    margin: 55px 0 25px;
+}
+
+.cocktail-text {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.cocktail-content button {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 14px 20px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.footer {
+    min-height: 480px;
+    background:
+        url("../images/Mask%20group%20%284%29.png") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-logo img {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+}
+
+.footer-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 700px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-icons img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
 @media (max-width: 1024px) {
-    .header { padding: 0 10px; }
-    .menu { display: none; }
-    .hamburger { display: block; }
-    .banner { height: 210px; }
-    .banner-text h1 { font-size: 38px; }
-    .recommendation { gap: 15px; padding: 25px 4%; }
-    .food { height: 220px; }
-    .food h3 { font-size: 10px; }
+
+    .header {
+        padding: 0 10px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .banner {
+        height: 210px;
+    }
+
+    .banner-text h1 {
+        font-size: 38px;
+    }
+
+    .recommendation {
+        gap: 15px;
+        padding: 25px 4%;
+    }
+
+    .food {
+        height: 220px;
+    }
+
+    .food h3 {
+        font-size: 13px;
+    }
+
+    .main-course-image {
+        height: 650px;
+    }
+
+    .main-course-content {
+        padding: 35px 30px;
+    }
+
+    .main-course-content h1 {
+        font-size: 42px;
+    }
+
+    .course-title h3 {
+        font-size: 16px;
+    }
+
+    .dessert-list {
+        padding: 0 20px;
+        gap: 12px;
+    }
+
+    .dessert-item img {
+        height: 300px;
+    }
+
+    .dessert-info h3 {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 600px) {
-    .header { height: 75px; padding: 0 20px; }
-    .logo { gap: 8px; }
-    .logo img { width: 35px; height: 35px; }
-    .logo h2 { font-size: 16px; }
-    .hamburger img { width: 20px; height: 20px; }
-    .banner { height: 180px; }
-    .banner-text p { font-size: 8px; }
-    .banner-text h1 { font-size: 25px; }
-    .recommendation { grid-template-columns: 1fr; padding: 20px; }
-    .food { height: 250px; }
-    .food h3 { font-size: 13px; }
+
+    .header {
+        height: 75px;
+        padding: 0 20px;
+    }
+
+    .logo {
+        gap: 8px;
+    }
+
+    .logo img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .logo h2 {
+        font-size: 16px;
+    }
+
+    .hamburger img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .banner {
+        height: 180px;
+    }
+
+    .banner-text p {
+        font-size: 8px;
+    }
+
+    .banner-text h1 {
+        font-size: 25px;
+    }
+
+    .recommendation {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .food {
+        height: 250px;
+    }
+
+    .food h3 {
+        font-size: 18px;
+    }
+
+    .main-course {
+        grid-template-columns: 1fr;
+    }
+
+    .main-course-image {
+        height: 350px;
+    }
+
+    .main-course-content {
+        padding: 30px 20px;
+    }
+
+    .main-course-content h1 {
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+
+    .dessert-banner {
+        height: 180px;
+    }
+
+    .dessert-banner h1 {
+        font-size: 32px;
+    }
+
+    .dessert-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 15px;
+        padding: 0 15px;
+        margin: 30px auto;
+    }
+
+    .dessert-item img {
+        height: 250px;
+    }
+
+    .dessert-info h3 {
+        font-size: 12px;
+        white-space: normal;
+    }
+
+    .dessert-info span {
+        font-size: 11px;
+    }
+
+    .cocktail {
+        height: 450px;
+        padding: 25px;
+    }
+
+    .cocktail-content {
+        width: 100%;
+    }
+
+    .cocktail-content h1 {
+        font-size: 35px;
+    }
+
+    .cocktail-text {
+        font-size: 12px;
+    }
+
+    .footer {
+        min-height: 350px;
+    }
+
+    .footer-logo img {
+        width: 140px;
+    }
+
+    .footer-content p {
+        font-size: 12px;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .social-icons img {
+        width: 24px;
+        height: 24px;
+    }
 }
