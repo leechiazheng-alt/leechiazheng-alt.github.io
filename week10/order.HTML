@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,20 +27,21 @@
                 <h2>ROMALIYA</h2>
             </div>
 
-            <nav class="navbar">
-                <a href="#">Home</a>
-                <a href="#">Menu</a>
-                <a href="#" class="active">Order</a>
-                <a href="#">Promotion</a>
-                <a href="#">About Us</a>
-                <a href="#">Our Restaurant</a>
+            <nav class="navbar" id="navbar">
 
-                <a href="#" class="order-icon">
+                <a href="home.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="order.html" class="active">Order</a>
+                <a href="promotion.html">Promotion</a>
+                <a href="restaurant.html">Our Restaurant</a>
+
+                <a href="order.html" class="order-icon">
                     <img src="images/order.png" alt="Order">
                 </a>
+
             </nav>
 
-            <button class="menu-toggle" aria-label="Open menu">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -78,7 +80,7 @@
                 <h2>CHOOSE YOUR FAVOURITES</h2>
 
                 <p class="order-description">
-                    Select a quantity, add your dishes to the cart,<br>
+                    Select a quantity, add your dishes to the cart,
                     then review everything before checkout.
                 </p>
 
@@ -115,7 +117,6 @@
 
                         <p class="food-description">
                             Tender lobster gently poached in butter for a
-                            <br>
                             rich, delicate finish.
                         </p>
 
@@ -150,7 +151,6 @@
 
                         <p class="food-description">
                             Juicy duck breast paired with a bright cherry
-                            <br>
                             sauce for a sweet-savory balance.
                         </p>
 
@@ -189,15 +189,12 @@
 
             <div class="featured-info">
 
-                <p class="featured-category">
-                    HOUSE FAVOURITE
-                </p>
+                <p class="featured-category">HOUSE FAVOURITE</p>
 
                 <h2>TWICE COOKED PORK</h2>
 
                 <p class="featured-description">
                     Nunc nec neque cras id dui curabitur
-                    <br>
                     blandit mollis lacus.
                 </p>
 
@@ -380,6 +377,25 @@
     </footer>
 
     <script>
+
+        const toggleButton = document.getElementById("menu-toggle");
+        const menu = document.getElementById("navbar");
+
+        toggleButton.addEventListener("click", () => {
+
+            menu.classList.toggle("active");
+
+            if (menu.classList.contains("active")) {
+                toggleButton.innerHTML = "&times;";
+            } else {
+                toggleButton.innerHTML = `
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                `;
+            }
+
+        });
 
         let cart = [];
 

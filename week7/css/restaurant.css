@@ -1,0 +1,1138 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 74px;
+    padding: 0 9.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(
+        to right,
+        black 0%,
+        black 49.3%,
+        rgba(0, 0, 0, 0.65) 49.3%,
+        rgba(0, 0, 0, 0.65) 100%
+    );
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 19px;
+}
+
+.menu-item a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    transition: 0.3s;
+    padding: 10px;
+}
+
+.menu-item a:hover {
+    color: #d6b45a;
+}
+
+.order {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    background: black;
+    overflow: hidden;
+}
+
+.hero-content {
+    flex: 0 0 49.3%;
+    width: 49.3%;
+    min-width: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 9.5%;
+    padding-right: 5%;
+    background: black;
+}
+
+.subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.hero-content h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 1.38;
+    margin-bottom: 43px;
+}
+
+.description {
+    width: 100%;
+    max-width: 450px;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.85;
+}
+
+.hero-image {
+    flex: 0 0 50.7%;
+    width: 50.7%;
+    min-width: 0;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.desktop-image {
+    display: block;
+}
+
+.mobile-image {
+    display: none !important;
+}
+
+.gallery-section {
+    width: 100%;
+    min-height: 762px;
+    height: 100vh;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 63px;
+}
+
+.gallery-top-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 52px;
+    font-weight: 500;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.gallery-images {
+    width: 81%;
+    max-width: 805px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gallery-item {
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-left {
+    width: 23.6%;
+    height: 238px;
+}
+
+.gallery-center {
+    width: 33.2%;
+    height: 340px;
+}
+
+.gallery-right {
+    width: 23.6%;
+    height: 238px;
+}
+
+.gallery-bottom {
+    width: 100%;
+    text-align: center;
+    margin-top: 126px;
+}
+
+.gallery-bottom h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 52px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 3px;
+}
+
+.gallery-bottom p {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+.food-gallery {
+    width: 100%;
+    background: white;
+    padding: 0;
+    margin: 0;
+}
+
+.food-gallery-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+}
+
+.food-item {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.food-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+.reviews-section {
+    width: 100%;
+    min-height: 462px;
+    background: white;
+    color: black;
+    padding: 103px 0 59px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 37px;
+}
+
+.reviews-title span {
+    display: inline;
+}
+
+.reviews-container {
+    width: 81.3%;
+    max-width: none;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 21px;
+}
+
+.review-card {
+    width: 100%;
+    height: 206px;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 42px 5px 25px;
+    text-align: center;
+}
+
+.review-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.review-card p {
+    font-family: 'Playfair Display', serif;
+    font-size: 12.5px;
+    font-weight: 400;
+    line-height: 1.55;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.review-stars {
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    line-height: 1;
+    letter-spacing: 2px;
+    color: #c5a15d;
+}
+
+.footer {
+    width: 100%;
+    height: 420px;
+    position: relative;
+    overflow: hidden;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    z-index: 1;
+}
+
+.footer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.75;
+    z-index: 2;
+}
+
+.footer-content {
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.footer-logo img {
+    display: block;
+    width: 165px;
+    height: auto;
+    object-fit: contain;
+}
+
+.footer-description {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: white;
+    margin: 0 0 35px;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.footer-social a {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.footer-social img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    display: block;
+}
+
+.footer-social a:hover {
+    background: #c5a66e;
+    transform: translateY(-3px);
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .header {
+        position: relative;
+        height: 105px;
+        padding: 0 8%;
+        background: black;
+        z-index: 1002;
+    }
+
+    .logo {
+        font-size: 25px;
+        gap: 18px;
+    }
+
+    .logo img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        height: 100vh;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #222;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .menu.active {
+        opacity: 1;
+        visibility: visible;
+        right: 0;
+    }
+
+    .menu-item {
+        margin: 15px 0;
+    }
+
+    .menu-item a {
+        font-size: 22px;
+    }
+
+    .hero {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: calc(100vh - 105px);
+        min-height: 580px;
+        overflow: hidden;
+    }
+
+    .hero-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+    .desktop-image {
+        display: none !important;
+    }
+
+    .mobile-image {
+        display: block !important;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .hero-image::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.35);
+        z-index: 1;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 124px 12.7% 50px;
+        background: transparent;
+    }
+
+    .subtitle {
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin-bottom: 25px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(48px, 8vw, 72px);
+        line-height: 1.25;
+        margin-bottom: 48px;
+    }
+
+    .description {
+        width: 100%;
+        max-width: 620px;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .gallery-section {
+        height: auto;
+        min-height: 762px;
+        padding-top: 55px;
+        padding-bottom: 45px;
+    }
+
+    .gallery-top-title {
+        font-size: clamp(30px, 6vw, 45px);
+        margin-bottom: 45px;
+    }
+
+    .gallery-images {
+        width: 88%;
+        max-width: 650px;
+    }
+
+    .gallery-left,
+    .gallery-right {
+        height: 190px;
+    }
+
+    .gallery-center {
+        height: 275px;
+    }
+
+    .gallery-bottom {
+        margin-top: 100px;
+    }
+
+    .gallery-bottom h2 {
+        font-size: 45px;
+    }
+
+    .gallery-bottom p {
+        font-size: 12px;
+        padding: 0 15px;
+    }
+
+    .food-gallery-grid {
+        width: 85%;
+        margin: 0 auto;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-flow: row;
+        gap: 0;
+    }
+
+    .food-item {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+
+    .food-item:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .food-item:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .food-item:nth-child(5) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .food-item:nth-child(6) {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .food-item:nth-child(3) {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .food-item:nth-child(4) {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .food-item:nth-child(7) {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .food-item:nth-child(8) {
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    .reviews-section {
+        min-height: auto;
+        padding: 75px 0 55px;
+    }
+
+    .reviews-title {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .reviews-container {
+        width: 88%;
+        max-width: 650px;
+        gap: 15px;
+    }
+
+    .review-card {
+        height: 195px;
+        padding: 32px 4px 23px;
+    }
+
+    .review-card p {
+        font-size: 11px;
+        white-space: normal;
+    }
+
+    .review-stars {
+        font-size: 21px;
+        letter-spacing: 1px;
+    }
+
+    .footer {
+        height: 380px;
+    }
+
+    .footer-logo img {
+        width: 155px;
+    }
+
+    .footer-description {
+        max-width: 90%;
+        font-size: 13px;
+        line-height: 1.8;
+        margin-bottom: 28px;
+    }
+
+    .footer-social {
+        gap: 11px;
+    }
+
+    .footer-social a {
+        width: 46px;
+        height: 46px;
+        min-width: 46px;
+    }
+
+    .footer-social img {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .gallery-section {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        padding: 15px 0 18px;
+    }
+
+    .gallery-top-title {
+        width: 100%;
+        max-width: 190px;
+        font-size: 23px;
+        line-height: 1.4;
+        text-align: center;
+        margin: 0 auto 16px;
+        padding: 0;
+    }
+
+    .gallery-images {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 19px;
+    }
+
+    .gallery-left,
+    .gallery-right {
+        width: 68%;
+        height: auto;
+        aspect-ratio: 0.8 / 1;
+    }
+
+    .gallery-center {
+        width: 68%;
+        height: auto;
+        aspect-ratio: 0.667 / 1;
+    }
+
+    .gallery-item {
+        flex-shrink: 0;
+        overflow: hidden;
+    }
+
+    .gallery-item img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .gallery-bottom {
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .gallery-bottom h2 {
+        font-size: 52px;
+        line-height: 1.3;
+        margin-bottom: 3px;
+    }
+
+    .gallery-bottom p {
+        width: 92%;
+        max-width: 380px;
+        margin: 0 auto;
+        font-size: 13px;
+        line-height: 1.8;
+        padding: 0;
+    }
+
+    .food-gallery-grid {
+        width: 85%;
+        margin: 0 auto;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .reviews-section {
+        width: 100%;
+        min-height: 0;
+        padding: 32px 0 35px;
+    }
+
+    .reviews-title {
+        width: 100%;
+        max-width: none;
+        font-size: 27px;
+        font-weight: 600;
+        line-height: 1.4;
+        text-align: center;
+        margin: 0 auto 20px;
+    }
+
+    .reviews-title span {
+        display: block;
+        white-space: nowrap;
+    }
+
+    .reviews-container {
+        width: 76%;
+        max-width: 400px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .review-card {
+        width: 100%;
+        height: 147px;
+        padding: 20px 6px 16px;
+        justify-content: space-between;
+    }
+
+    .review-card h3 {
+        font-size: 9px;
+        line-height: 1.3;
+    }
+
+    .review-card p {
+        font-size: 8px;
+        line-height: 1.55;
+        white-space: normal;
+    }
+
+    .review-stars {
+        font-size: 17px;
+        letter-spacing: 1px;
+        line-height: 1;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .gallery-section {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        padding: 5px 0 0;
+    }
+
+    .gallery-top-title {
+        width: 100%;
+        max-width: none;
+        font-size: 20px;
+        line-height: 1.2;
+        margin: 0 auto 5px;
+        text-align: center;
+    }
+
+    .gallery-bottom {
+        width: 100%;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .gallery-bottom h2 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    .gallery-bottom p {
+        width: 90%;
+        max-width: 370px;
+        margin: 0 auto 28px;
+        padding: 0;
+        font-family: 'Playfair Display', serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.7;
+        text-align: center;
+    }
+
+    .food-gallery {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: white;
+    }
+
+    .food-gallery-grid {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-auto-flow: row;
+        gap: 0;
+        background: white;
+    }
+
+    .food-item {
+        grid-column: 1 !important;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .food-item img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .food-item:nth-child(1) {
+        grid-row: 1 !important;
+    }
+
+    .food-item:nth-child(2) {
+        grid-row: 2 !important;
+    }
+
+    .food-item:nth-child(5) {
+        grid-row: 3 !important;
+    }
+
+    .food-item:nth-child(6) {
+        grid-row: 4 !important;
+    }
+
+    .food-item:nth-child(3) {
+        grid-row: 5 !important;
+    }
+
+    .food-item:nth-child(4) {
+        grid-row: 6 !important;
+    }
+
+    .food-item:nth-child(7) {
+        grid-row: 7 !important;
+    }
+
+    .food-item:nth-child(8) {
+        grid-row: 8 !important;
+    }
+
+    .reviews-section {
+        padding: 25px 0 30px;
+    }
+
+    .reviews-title {
+        width: 100%;
+        max-width: none;
+        font-size: 25px;
+        line-height: 1.5;
+        margin-bottom: 18px;
+    }
+
+    .reviews-title span {
+        display: block;
+        white-space: nowrap;
+    }
+
+    .reviews-container {
+        width: 76%;
+        gap: 28px;
+    }
+
+    .review-card {
+        height: 147px;
+        padding: 19px 6px 16px;
+    }
+
+    .review-card h3 {
+        font-size: 9px;
+    }
+
+    .review-card p {
+        font-size: 8px;
+        line-height: 1.55;
+    }
+
+    .review-stars {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .header {
+        height: 80px;
+        padding: 0 7%;
+    }
+
+    .logo {
+        font-size: 21px;
+        gap: 12px;
+    }
+
+    .logo img {
+        width: 43px;
+        height: 43px;
+    }
+
+    .hero {
+        height: calc(100vh - 80px);
+        min-height: 600px;
+    }
+
+    .hero-content {
+        padding: 95px 8% 40px;
+    }
+
+    .subtitle {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+        margin-bottom: 22px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(40px, 9vw, 52px);
+        line-height: 1.3;
+        margin-bottom: 45px;
+    }
+
+    .description {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .reviews-section {
+        padding: 25px 0 30px;
+    }
+
+    .reviews-title {
+        font-size: 24px;
+        line-height: 1.5;
+        margin-bottom: 18px;
+    }
+
+    .reviews-container {
+        width: 76%;
+        gap: 28px;
+    }
+
+    .review-card {
+        height: 147px;
+        padding: 19px 6px 16px;
+    }
+
+    .review-card h3 {
+        font-size: 9px;
+    }
+
+    .review-card p {
+        font-size: 8px;
+    }
+
+    .review-stars {
+        font-size: 17px;
+    }
+
+    .footer {
+        height: 320px;
+    }
+
+    .footer-content {
+        padding: 20px 15px;
+    }
+
+    .footer-logo {
+        margin-bottom: 14px;
+    }
+
+    .footer-logo img {
+        width: 140px;
+    }
+
+    .footer-description {
+        width: 100%;
+        max-width: 360px;
+        font-size: 11px;
+        line-height: 1.8;
+        margin-bottom: 23px;
+    }
+
+    .footer-description br {
+        display: none;
+    }
+
+    .footer-social {
+        gap: 10px;
+    }
+
+    .footer-social a {
+        width: 43px;
+        height: 43px;
+        min-width: 43px;
+    }
+
+    .footer-social img {
+        width: 39px;
+        height: 39px;
+    }
+}
